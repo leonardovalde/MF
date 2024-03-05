@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:3000/',
+    publicPath: 'https://mf-host.onrender.com/',
   },
 
   resolve: {
@@ -44,8 +44,8 @@ module.exports = (_, argv) => ({
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        navbar: 'navbarHost@http://localhost:3001/remoteEntry.js',
-        counter: 'counterHost@http://localhost:51166/remoteEntry.js',
+        navbar: 'navbarHost@https://mf-navbar.onrender.com/remoteEntry.js',
+        counter: 'counterHost@https://mf-ft4o.onrender.com/remoteEntry.js',
       },
       exposes: {},
       shared: {
